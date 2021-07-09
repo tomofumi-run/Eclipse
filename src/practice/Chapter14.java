@@ -7,8 +7,9 @@ public class Chapter14 {
 
     public static void main(String[] args) {
         List<Character> party = new ArrayList<Character>();
-        party.add(new Soldier());
-        party.add(new Playboy());
+        //インスタンスをaddで追加
+        party.add(new Soldier()); //Soldier
+        party.add(new Playboy()); //Playboy
 
         Chapter14.partyAttack(party);
     }
