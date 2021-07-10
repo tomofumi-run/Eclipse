@@ -1,10 +1,26 @@
-public class MyApp {
-  public static void main(String[] args){
-    int[] sales = { 700, 400, 500 };
+class User {
+  String name;
 
-    for (int sale : sales ){
-      System.out.println(sale);
-    }
-
+  User(String name){
+    this.name = name;
   }
+
+  void sayHi(){
+    System.out.println("Hi" + this.name );
+  }
+}
+
+public class MyApp {
+
+  public static void main(String[] args) {
+    // int x;
+    // String s;
+
+    // Class
+    User tom;
+    tom = new User("Tom"); // インスタンス
+    System.out.println(tom.name);
+    tom.sayHi();
+  }
+
 }
