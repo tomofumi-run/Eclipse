@@ -1,9 +1,10 @@
 public class MyApp {
   public static void main(String[] args){
-    double d = 5432.5432;
-    int i =  (int)d;
+    int[] sales = { 700, 400, 500 };
 
-    System.out.println(i);
+    for (int sale : sales ){
+      System.out.println(sale);
+    }
 
   }
 }
