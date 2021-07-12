@@ -1,20 +1,9 @@
 class User {
-  private String name;
-  private int score;
 
-  User(String name, int score){
-    this.name = name;
-    this.score = score;
   }
 
-  public int getScore(){ //getter
-    return this.score;
-  }
-
-  public void setScore(int score){ //setter
-    if(score > 0){
-      this.score = score;
-    }
+  public static void getInfo(){
+    System.out.println("# of instance:" + User.count);
   }
 }
 
@@ -25,10 +14,11 @@ public class MyApp {
     // String s;
 
     // Class
-    User tom = new User("Tom", 65); // インスタンス
-    tom.setScore(85);
-    tom.setScore(-22);
-    System.out.println(tom.getScore());
+    User.getInfo();
+    User tom = new User("Tom");
+    User.getInfo();
+    User bob = new User("bob");
+    User.getInfo();
   }
 
 }
