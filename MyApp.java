@@ -1,24 +1,40 @@
-class User {
+// Thread
 
-  }
-
-  public static void getInfo(){
-    System.out.println("# of instance:" + User.count);
-  }
-}
+// class MyRunnable implements Runnable { // 関数型インターフェース
+//   @Override
+//   public void run() {
+//     for (int i = 0; i < 500; i++) {
+//       System.out.print('*');
+//     }
+//   }
+// }
 
 public class MyApp {
 
   public static void main(String[] args) {
-    // int x;
-    // String s;
+    // MyRunnable r = new MyRunnable();
+    // Thread t = new Thread(r);
+    // t.start();
 
-    // Class
-    User.getInfo();
-    User tom = new User("Tom");
-    User.getInfo();
-    User bob = new User("bob");
-    User.getInfo();
+    // ラムダ式
+    // (引数) -> {処理}
+    // new Thread(new Runnable() {
+    //   @Override
+    //   public void run() {
+    //     for (int i = 0; i < 500; i++) {
+    //       System.out.print('*');
+    //     }
+    //   }
+    // }).start();
+    new Thread(() -> {
+      for (int i = 0; i < 500; i++) {
+        System.out.print('*');
+      }
+    }).start();
+
+    for (int i = 0; i < 500; i++) {
+      System.out.print('.');
+    }
   }
 
 }
